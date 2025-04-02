@@ -104,7 +104,7 @@ export default function App() {
 
       {/* Footer */}
       <footer className="text-xs text-gray-400 text-center mt-6 max-w-7xl mx-auto">
-        React Headless Menu • Open Source • {new Date().getFullYear()}
+        &copy; React Headless Menu • {new Date().getFullYear()}
       </footer>
     </div>
   );
