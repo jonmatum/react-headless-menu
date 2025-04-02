@@ -1,0 +1,11 @@
+{
+    "release-type": "node",
+    "packages": {
+        ".": {
+            "release-type": "node",
+            "extra-files": [
+                "README.md"
+            ]
+        }
+    }
+}
