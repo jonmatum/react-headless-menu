@@ -3,6 +3,7 @@ import react from "@vitejs/plugin-react";
 import path from "path";
 
 export default defineConfig({
+  base: "/react-headless-menu/",
   root: path.resolve(__dirname, "./playground"),
   plugins: [react()],
   build: {

@@ -11,11 +11,6 @@ rm -rf ./docs
 # Copy playground build
 cp -r ./playground/docs ./docs
 
-# Rewrite relative paths for GitHub Pages
-echo "✅ Updating asset paths in ./docs/index.html"
-sed -i '' 's|src="\./assets|src="../react-headless-menu/assets|g' ./docs/index.html
-sed -i '' 's|href="\./assets|href="../react-headless-menu/assets|g' ./docs/index.html
-
 # Commit and push
 echo "✅ Commit & push to GitHub"
 git add docs
