@@ -12,11 +12,9 @@ rm -rf ./docs
 cp -r ./playground/docs ./docs
 
 # Rewrite relative paths for GitHub Pages
-find ./docs/index.html -type f -print0 | while IFS= read -r -d '' file; do
-    echo "✅ Updating asset paths in $file"
-    sed -i '' 's|src="\./assets|src="../react-headless-menu/assets|g' "$file"
-    sed -i '' 's|href="\./assets|href="../react-headless-menu/assets|g' "$file"
-done
+echo "✅ Updating asset paths in ./docs/index.html"
+sed -i '' 's|src="\./assets|src="../react-headless-menu/assets|g' ./docs/index.html
+sed -i '' 's|href="\./assets|href="../react-headless-menu/assets|g' ./docs/index.html
 
 # Commit and push
 echo "✅ Commit & push to GitHub"
