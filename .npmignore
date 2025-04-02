@@ -1,0 +1,22 @@
+# Ignore playground
+playground/
+vite.playground.config.js
+
+# Ignore docs (output)
+docs/
+
+# Ignore config-only files
+.vscode/
+.gitignore
+.eslint*
+.prettier*
+tailwind.config.js
+postcss.config.js
+
+# Ignore test-only artifacts (optional if you add tests later)
+tests/
+coverage/
+vitest.config.js
+
+# Ignore misc
+*.log

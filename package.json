@@ -1,0 +1,69 @@
+{
+  "name": "@jonmatum/react-headless-menu",
+  "version": "0.0.0",
+  "type": "module",
+  "description": "A fully headless, responsive, themeable, and accessible menu system for React + TailwindCSS",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "files": [
+    "src",
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "dev": "vite --config vite.playground.config.js",
+    "build": "vite build",
+    "build:playground": "vite build --config vite.playground.config.js --outDir=docs",
+    "preview": "vite preview --config vite.playground.config.js",
+    "prepare": "vite build",
+    "deploy": "bash ./deploy.sh",
+    "lint": "eslint . --ext .js,.jsx",
+    "format": "prettier --write .",
+    "prepublishOnly": "npm run lint && npm run format && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jonmatum/react-headless-menu.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jonmatum/react-headless-menu/issues"
+  },
+  "homepage": "https://github.com/jonmatum/react-headless-menu#readme",
+  "keywords": [
+    "react",
+    "menu",
+    "headless",
+    "headlessui",
+    "tailwindcss",
+    "responsive",
+    "themeable"
+  ],
+  "author": "Jonatan Mata",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18"
+  },
+  "dependencies": {
+    "@headlessui/react": "^1.x",
+    "autoprefixer": "^10.4.21",
+    "lucide-react": "^0.x",
+    "postcss": "^8.5.3",
+    "react-icons": "^5.5.0",
+    "tailwindcss": "^3.x"
+  },
+  "devDependencies": {
+    "@tailwindcss/forms": "^0.x",
+    "@vitejs/plugin-react": "^4.3.4",
+    "eslint": "^9.x",
+    "prettier": "^3.x",
+    "vite": "^6.2.4"
+  }
+}
