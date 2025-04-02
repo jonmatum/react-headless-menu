@@ -6,7 +6,7 @@ export default defineConfig({
   root: path.resolve(__dirname, "./playground"),
   plugins: [react()],
   build: {
-    outDir: path.resolve(__dirname, "./docs"),
+    outDir: path.resolve(__dirname, "./playground/docs"),
     emptyOutDir: true,
   },
   resolve: {

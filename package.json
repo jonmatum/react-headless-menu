@@ -4,7 +4,6 @@
   "type": "module",
   "description": "A fully headless, responsive, themeable, and accessible menu system for React + TailwindCSS",
   "main": "dist/index.js",
-  "types": "dist/index.d.ts",
   "exports": {
     ".": "./dist/index.js"
   },
@@ -26,7 +25,8 @@
     "deploy": "bash ./deploy.sh",
     "lint": "eslint . --ext .js,.jsx",
     "format": "prettier --write .",
-    "prepublishOnly": "npm run lint && npm run format && npm run build"
+    "prepublishOnly": "npm run lint && npm run format && npm run build",
+    "release": "npm run build && npm publish"
   },
   "repository": {
     "type": "git",
@@ -43,10 +43,12 @@
     "headlessui",
     "tailwindcss",
     "responsive",
-    "themeable"
+    "themeable",
+    "component-library"
   ],
   "author": "Jonatan Mata",
   "license": "MIT",
+  "sideEffects": false,
   "peerDependencies": {
     "react": ">=18",
     "react-dom": ">=18"

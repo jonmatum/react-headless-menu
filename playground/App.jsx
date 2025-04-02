@@ -91,10 +91,9 @@ export default function App() {
                 {variant} Variant
               </h2>
               <Menu
-                variant={variant}
                 items={menuData}
                 userScopes={userScopes}
-                theme={theme}
+                variant={variant}
                 color={color}
                 themeName={themeName}
               />
@@ -105,7 +104,7 @@ export default function App() {
 
       {/* Footer */}
       <footer className="text-xs text-gray-400 text-center mt-6 max-w-7xl mx-auto">
-        Crafted with ❤️ by you • {new Date().getFullYear()}
+        React Headless Menu • Open Source • {new Date().getFullYear()}
       </footer>
     </div>
   );

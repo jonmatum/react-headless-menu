@@ -6,6 +6,7 @@ import {
 } from "@headlessui/react";
 import { ChevronDown } from "lucide-react";
 import { getModernPalette } from "../helpers/getModernPalette.js";
+import { getAppearanceFromVariant } from "../helpers/getAppearanceFromVariant";
 
 // --------------------
 // Optional default theme
@@ -35,12 +36,11 @@ export default function Menu({
   items = [],
   userScopes = [],
   variant = "auto",
-  theme = {},
   color = "blue",
+  themeName,
   selected: controlledSelected,
   onSelect: controlledOnSelect,
   breakpoint = 768,
-  themeName,
 }) {
   const [internalSelected, setInternalSelected] = useState(null);
   const [screenVariant, setScreenVariant] = useState(
@@ -49,7 +49,6 @@ export default function Menu({
 
   const selected = controlledSelected ?? internalSelected;
   const onSelect = controlledOnSelect ?? setInternalSelected;
-  const t = { ...defaultTheme, ...theme };
 
   // Responsiveness listener
   useEffect(() => {
@@ -59,19 +58,18 @@ export default function Menu({
     return () => window.removeEventListener("resize", handler);
   }, [variant, breakpoint]);
 
+  const appearance = getAppearanceFromVariant(screenVariant, themeName);
+  const t = getModernPalette(color, appearance);
+
   const filtered = filterItemsByScope(items, userScopes);
 
   if (screenVariant === "topbar")
     return (
-      <TopbarMenu
-        {...{ items: filtered, theme: t, selected, onSelect, color, themeName }}
-      />
+      <TopbarMenu {...{ items: filtered, theme: t, selected, onSelect, themeName, color }} />
     );
   if (screenVariant === "dropdown")
     return (
-      <DropdownMenu
-        {...{ items: filtered, theme: t, selected, onSelect, color, themeName }}
-      />
+      <DropdownMenu {...{ items: filtered, theme: t, selected, onSelect }} />
     );
   return <SidebarMenu {...{ items: filtered, theme: t, selected, onSelect }} />;
 }
@@ -109,7 +107,7 @@ function SidebarMenu({ items, theme, selected, onSelect }) {
 // --------------------
 // Topbar Variant
 // --------------------
-function TopbarMenu({ items, theme, selected, onSelect, color, themeName }) {
+function TopbarMenu({ items, theme, selected, onSelect, themeName, color }) {
   const isDark = themeName === "dark";
 
   // ✅ Generate dropdown theme correctly
@@ -151,7 +149,7 @@ function TopbarMenu({ items, theme, selected, onSelect, color, themeName }) {
 // --------------------
 // Dropdown Variant (mobile or custom)
 // --------------------
-function DropdownMenu({ items, theme, selected, onSelect, color, themeName }) {
+function DropdownMenu({ items, theme, selected, onSelect }) {
   return (
     <HeadlessMenu as="div" className={theme.dropdownContainer}>
       <HeadlessMenu.Button className={theme.dropdownButton}>
