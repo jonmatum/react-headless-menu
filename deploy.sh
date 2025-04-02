@@ -9,4 +9,4 @@ git commit -m "docs: update playground"
 git push
 
 echo "🌍 Playground ready to publish"
-echo "👉 https://your-github-username.github.io/your-repo-name/"
+echo "👉 https://jonmatum.github.io/react-headless-menu/"
