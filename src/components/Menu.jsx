@@ -44,7 +44,7 @@ export default function Menu({
 }) {
   const [internalSelected, setInternalSelected] = useState(null);
   const [screenVariant, setScreenVariant] = useState(
-    variant === "auto" ? getResponsiveVariant() : variant
+    variant === "auto" ? getResponsiveVariant() : variant,
   );
 
   const selected = controlledSelected ?? internalSelected;
@@ -65,7 +65,9 @@ export default function Menu({
 
   if (screenVariant === "topbar")
     return (
-      <TopbarMenu {...{ items: filtered, theme: t, selected, onSelect, themeName, color }} />
+      <TopbarMenu
+        {...{ items: filtered, theme: t, selected, onSelect, themeName, color }}
+      />
     );
   if (screenVariant === "dropdown")
     return (
@@ -262,12 +264,13 @@ function filterItemsByScope(items, userScopes) {
   return items
     .filter(
       (group) =>
-        !group.requiredScope || userScopes.includes(group.requiredScope)
+        !group.requiredScope || userScopes.includes(group.requiredScope),
     )
     .map((group) => ({
       ...group,
       items: (group.items || []).filter(
-        (item) => !item.requiredScope || userScopes.includes(item.requiredScope)
+        (item) =>
+          !item.requiredScope || userScopes.includes(item.requiredScope),
       ),
     }));
 }

@@ -688,7 +688,17 @@ function Dr({
     return window.addEventListener("resize", S), () => window.removeEventListener("resize", S);
   }, [c, b]);
   const B = jr(m, f), A = Me(v, B), N = Or(n, o);
-  return m === "topbar" ? /* @__PURE__ */ u.jsx(Cr, { items: N, theme: A, selected: C, onSelect: O, themeName: f, color: v }) : m === "dropdown" ? /* @__PURE__ */ u.jsx(Sr, { items: N, theme: A, selected: C, onSelect: O }) : /* @__PURE__ */ u.jsx(Tr, { items: N, theme: A, selected: C, onSelect: O });
+  return m === "topbar" ? /* @__PURE__ */ u.jsx(
+    Cr,
+    {
+      items: N,
+      theme: A,
+      selected: C,
+      onSelect: O,
+      themeName: f,
+      color: v
+    }
+  ) : m === "dropdown" ? /* @__PURE__ */ u.jsx(Sr, { items: N, theme: A, selected: C, onSelect: O }) : /* @__PURE__ */ u.jsx(Tr, { items: N, theme: A, selected: C, onSelect: O });
 }
 function Tr({ items: n, theme: o, selected: c, onSelect: v }) {
   return /* @__PURE__ */ u.jsx("div", { className: o.sidebarContainer, children: n.map((f, y) => /* @__PURE__ */ u.jsxs("div", { className: o.sidebarGroup, children: [

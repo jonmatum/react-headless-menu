@@ -1,6 +1,6 @@
 export function getModernPalette(
   color = "blue",
-  options = { isDark: false, appearance: "inverted" }
+  options = { isDark: false, appearance: "inverted" },
 ) {
   const { isDark, appearance } = options;
 

@@ -79,7 +79,7 @@ export default function App() {
         {["auto", "topbar", "sidebar", "dropdown"].map((variant) => {
           const theme = getModernPalette(
             color,
-            getAppearanceFromVariant(variant, themeName)
+            getAppearanceFromVariant(variant, themeName),
           );
 
           return (
