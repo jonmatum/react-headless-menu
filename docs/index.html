@@ -2,15 +2,56 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>React Headless Menu Playground</title>
-  <script type="module" crossorigin src="../react-headless-menu/assets/index-CmX6kbpx.js"></script>
-  <link rel="stylesheet" crossorigin href="../react-headless-menu/assets/index-DdaASmXj.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>React Headless Menu</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body>
-    <div id="root"></div>
+<body class="bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 text-white min-h-screen flex flex-col">
+
+  <div class="max-w-5xl mx-auto py-10 px-6 space-y-8 flex-1">
+
+    <!-- Header -->
+    <header class="space-y-3 text-center">
+      <h1 class="text-4xl font-bold">React Headless Menu</h1>
+      <p class="text-gray-400">A fully headless, themeable, responsive, and access-controlled menu system for React +
+        Tailwind CSS</p>
+    </header>
+
+    <!-- Badges -->
+    <div class="flex flex-wrap justify-center gap-2">
+      <a href="https://www.npmjs.com/package/react-headless-menu"><img
+          src="https://img.shields.io/npm/v/react-headless-menu?style=flat-square" alt="npm version"></a>
+      <a href="./LICENSE"><img
+          src="https://img.shields.io/github/license/yourusername/react-headless-menu?style=flat-square"
+          alt="license"></a>
+      <a href="https://github.com/yourusername/react-headless-menu"><img
+          src="https://img.shields.io/github/stars/yourusername/react-headless-menu?style=flat-square"
+          alt="GitHub stars"></a>
+      <a href="https://yourusername.github.io/react-headless-menu/"><img
+          src="https://img.shields.io/badge/Playground-Live-informational?style=flat-square" alt="Playground"></a>
+      <a href="https://tailwindcss.com"><img
+          src="https://img.shields.io/badge/TailwindCSS-Ready-38bdf8?style=flat-square&logo=tailwindcss"
+          alt="TailwindCSS"></a>
+      <a href="https://reactjs.org"><img src="https://img.shields.io/badge/React-18+-blue?style=flat-square&logo=react"
+          alt="React"></a>
+    </div>
+
+    <!-- Live Playground -->
+    <section class="space-y-3">
+      <h2 class="text-xl font-semibold">Live Playground</h2>
+      <div class="aspect-video border rounded overflow-hidden shadow-lg">
+        <iframe src="../react-headless-menu/playground/index.html" class="w-full h-full border-0"></iframe>
+      </div>
+    </section>
+
+  </div>
+
+  <footer class="text-xs text-gray-500 text-center py-4">
+    &copy; 2025 React Headless Menu
+  </footer>
+
 </body>
 
 </html>
