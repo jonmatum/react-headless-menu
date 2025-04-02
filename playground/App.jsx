@@ -18,7 +18,7 @@ export default function App() {
       {/* Header */}
       <header className="w-full max-w-7xl mx-auto flex flex-col md:flex-row md:justify-between md:items-center space-y-4 md:space-y-0">
         <h1 className="text-2xl font-bold text-gray-800 flex items-center gap-2">
-          ⚡ React Menu Playground
+          ⚡ React Headless Menu Playground
         </h1>
 
         <div className="flex flex-wrap items-center justify-end gap-2">
