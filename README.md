@@ -1,30 +1,30 @@
-# react-headless-menu
+# React Headless Menu
 
-A fully headless, themeable, access-controlled, and responsive menu system for React + TailwindCSS.
+A headless, themeable, access-controlled, and fully responsive menu system for React + TailwindCSS.
 
 [![npm version](https://img.shields.io/npm/v/react-headless-menu?style=flat-square)](https://www.npmjs.com/package/react-headless-menu)
-[![License](https://img.shields.io/github/license/yourusername/react-headless-menu?style=flat-square)](./LICENSE)
-[![GitHub stars](https://img.shields.io/github/stars/yourusername/react-headless-menu?style=flat-square)](https://github.com/yourusername/react-headless-menu)
-[![Playground](https://img.shields.io/badge/Playground-Live-informational?style=flat-square)](https://yourusername.github.io/react-headless-menu/)
-[![TailwindCSS](https://img.shields.io/badge/TailwindCSS-Ready-38bdf8?style=flat-square&logo=tailwindcss)](https://tailwindcss.com)
-[![React](https://img.shields.io/badge/React-18+-blue?style=flat-square&logo=react)](https://reactjs.org)
+[![License](https://img.shields.io/github/license/jonmatum/react-headless-menu?style=flat-square)](./LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/jonmatum/react-headless-menu?style=flat-square)](https://github.com/jonmatum/react-headless-menu)
+[![Playground](https://img.shields.io/badge/Playground-Live-informational?style=flat-square)](https://jonmatum.github.io/react-headless-menu/)
+[![TailwindCSS](https://img.shields.io/badge/TailwindCSS-Ready-38bdf8?style=flat-square)](https://tailwindcss.com)
+[![React](https://img.shields.io/badge/React-18%2B-blue?style=flat-square)](https://reactjs.org)
 
 ---
 
-## ✨ Features
+## Features
 
-- Fully headless — bring your own styles
-- Themeable via TailwindCSS classes
-- Dark & Light mode ready
-- Responsive (Sidebar / Topbar / Dropdown)
-- Supports up to 3 levels of nested menus
-- Scope-based access control (RBAC-friendly)
-- Playground with live theming and variants
-- Optimized for mobile & desktop
+- ✅ Fully headless — bring your own styles
+- 🎨 Themeable via TailwindCSS classes
+- 🌙 Dark & Light mode support
+- 📱 Responsive: Sidebar, Topbar, Dropdown
+- 🧩 Supports up to 3-level nested menus
+- 🔐 Scope-based access control (RBAC-friendly)
+- 🧪 Playground with live theming & variants
+- 📦 Optimized for mobile & desktop
 
 ---
 
-## 📦 Installation
+## Installation
 
 ```bash
 npm install react-headless-menu
@@ -32,7 +32,7 @@ npm install react-headless-menu
 
 ---
 
-## ⚡ Quick Usage
+## Quick Usage
 
 ```jsx
 import Menu from "react-headless-menu";
@@ -49,26 +49,33 @@ import Menu from "react-headless-menu";
 
 ---
 
-## 🧪 Playground
+## Playground
 
 ```bash
 npm run playground
 ```
 
-> Use `npm run build:playground` to export the playground into `/docs/` for GitHub Pages.
+To export the playground for GitHub Pages:
+
+```bash
+npm run build:playground
+```
+
+The output will be available inside `/docs/`.
 
 ---
 
-## 📚 Documentation
+## Documentation
 
-- Playground and usage examples available in `/src/playground`
-- More advanced documentation available in `/docs`
+- Playground & usage examples: `./playground`
+- Helper functions: `./src/helpers`
+- Components: `./src/components`
 
 ---
 
-## 🛣️ Roadmap
+## Roadmap
 
-- [ ] Accessibility Improvements (ARIA, Keyboard Nav)
+- [ ] Accessibility Improvements (ARIA, Keyboard Navigation)
 - [ ] Storybook integration
 - [ ] Framer Motion Animations
 - [ ] TypeScript Definitions
@@ -76,6 +83,6 @@ npm run playground
 
 ---
 
-## 📄 License
+## License
 
-MIT © 2025
+MIT License © 2025 Jonatan Mata
