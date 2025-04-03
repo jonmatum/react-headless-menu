@@ -73,16 +73,6 @@ The output will be available inside `/docs/`.
 
 ---
 
-## Roadmap
-
-- [ ] Accessibility Improvements (ARIA, Keyboard Navigation)
-- [ ] Storybook integration
-- [ ] Framer Motion Animations
-- [ ] TypeScript Definitions
-- [ ] Slots API
-
----
-
 ## License
 
 MIT License © 2025 Jonatan Mata
