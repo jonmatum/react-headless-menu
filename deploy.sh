@@ -1,22 +1,33 @@
 #!/bin/bash
-
 set -e
 
-echo "🚀 Building playground for GitHub Pages..."
+echo "📁 Preparing /docs folder..."
+rm -rf docs
+mkdir -p docs
+
+echo "🚀 Building playground..."
 npm run build:playground
 
-# Clean old docs
-rm -rf ./docs
+echo "🧱 Building docs..."
+cd docusaurus
+npm install
+npm run build
+cd ..
 
-# Copy playground build
-cp -r ./playground/docs ./docs
+# Copy landing index.html
+cp index.html docs/index.html
 
-# Commit and push
-echo "✅ Commit & push to GitHub"
+# Copy playground
+cp -R playground/docs docs/playground
+
+# Docs already moved by docusaurus: docs/guide
+
+echo "✅ Committing and pushing to GitHub..."
 git add docs
-git commit -m "docs: update playground for GitHub Pages"
+git commit -m "docs: update playground and guide"
 git push
 
-# Success message
-echo "🌍 Playground ready to publish"
-echo "👉 https://jonmatum.github.io/react-headless-menu/"
+echo "🌍 Site is live:"
+echo "Landing:     https://jonmatum.github.io/react-headless-menu/"
+echo "Playground:  https://jonmatum.github.io/react-headless-menu/playground/"
+echo "Docs:        https://jonmatum.github.io/react-headless-menu/guide/"
