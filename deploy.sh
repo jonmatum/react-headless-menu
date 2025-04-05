@@ -18,7 +18,7 @@ mkdir -p docs
 # cp index.html docs/index.html
 
 # Copy playground
-cp -R playground/docs docs/
+cp -R playground/docs docs
 
 # Docs already moved by docusaurus: docs/guide
 
