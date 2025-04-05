@@ -2,8 +2,7 @@
 
 // Main Component
 import Menu from "./components/Menu";
-export default Menu;
-export { Menu };
+export { Menu }; // Named export only (preferred)
 
 // Helpers
 export { getModernPalette } from "./helpers/getModernPalette";
