@@ -3,7 +3,7 @@ set -e
 
 echo "📁 Preparing /docs folder..."
 rm -rf docs
-mkdir -p docs
+# mkdir -p docs
 
 # echo "🚀 Building playground..."
 # npm run build:playground
