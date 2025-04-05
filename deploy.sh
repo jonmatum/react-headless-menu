@@ -1,6 +1,10 @@
 #!/bin/bash
 set -e
 
+echo "📁 Preparing /docs folder..."
+rm -rf docs
+mkdir -p docs
+
 echo "🚀 Building playground..."
 npm run build:playground
 
@@ -10,11 +14,7 @@ npm install
 npm run build
 cd ..
 
-echo "📁 Preparing /docs folder..."
-rm -rf docs
-mkdir -p docs
-
-# Copy landing index.html (optional)
+# Copy landing index.html
 cp index.html docs/index.html
 
 # Copy playground
