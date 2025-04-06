@@ -1,6 +1,6 @@
 {
   "name": "@jonmatum/react-headless-menu",
-  "version": "0.0.0",
+  "version": "0.0.3",
   "type": "module",
   "description": "A fully headless, responsive, themeable, and accessible menu system for React + TailwindCSS",
   "main": "dist/react-headless-menu.umd.js",

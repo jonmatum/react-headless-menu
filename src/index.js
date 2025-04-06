@@ -1,17 +1,35 @@
-// ========= PUBLIC API =========
+/**
+ * React Headless Menu — Public API
+ *
+ * This file exposes the main exports of the library:
+ * - `Menu`: the core headless menu component
+ * - `getModernPalette`: helper to generate color palettes
+ * - `getAppearanceFromVariant`: helper to resolve theme appearance
+ * - `palettes`: supported base color palette names
+ *
+ * @module react-headless-menu
+ */
 
-// Main Component
-import Menu from "./components/Menu";
-export default Menu;
-export { Menu };
+/**
+ * The main headless menu component.
+ * @see {@link Menu}
+ */
+export { default as Menu } from "./components/Menu";
 
-// Helpers
-export { getModernPalette } from "./helpers/getModernPalette";
-export { getAppearanceFromVariant } from "./helpers/getAppearanceFromVariant";
-export { palettes } from "./helpers/palettes";
+/**
+ * TailwindCSS palette helper.
+ * @function
+ */
+export {
+  getModernPalette,
+  getAppearanceFromVariant,
+  palettes,
+} from "./helpers";
 
-// Hooks (optional future exports)
+// ========= HOOKS =========
+// (Uncomment when hooks are available)
+/**
+ * Custom hooks (if available).
+ * @namespace Hooks
+ */
 // export * from "./hooks";
-
-// ========= INTERNAL (Optional) =========
-// You can later move internal-only exports here if needed
