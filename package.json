@@ -1,20 +1,17 @@
 {
   "name": "@jonmatum/react-headless-menu",
-  "version": "0.0.3",
+  "version": "0.0.0",
   "type": "module",
   "description": "A fully headless, responsive, themeable, and accessible menu system for React + TailwindCSS",
-  "main": "dist/react-headless-menu.umd.js",
-  "module": "dist/react-headless-menu.es.js",
+  "main": "dist/index.js",
   "exports": {
-    ".": {
-      "import": "./dist/react-headless-menu.es.js",
-      "require": "./dist/react-headless-menu.umd.js"
-    }
+    ".": "./dist/index.js"
   },
   "files": [
+    "src",
     "dist",
-    "README.md",
-    "LICENSE"
+    "LICENSE",
+    "README.md"
   ],
   "publishConfig": {
     "access": "restricted"
@@ -64,8 +61,7 @@
     "tailwindcss": "^3.x"
   },
   "devDependencies": {
-    "@tailwindcss/forms": "^0.5.10",
-    "@tailwindcss/typography": "^0.5.16",
+    "@tailwindcss/forms": "^0.x",
     "@vitejs/plugin-react": "^4.3.4",
     "eslint": "^9.23.0",
     "eslint-config-prettier": "^10.1.1",
