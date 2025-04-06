@@ -7,6 +7,7 @@ A fully headless, themeable, access-controlled, and responsive menu system for R
 [![Playground](https://img.shields.io/badge/Playground-Live-informational?style=flat-square)](https://jonmatum.github.io/react-headless-menu/)
 [![TailwindCSS](https://img.shields.io/badge/TailwindCSS-Ready-38bdf8?style=flat-square&logo=tailwindcss)](https://tailwindcss.com)
 [![React](https://img.shields.io/badge/React-18+-blue?style=flat-square&logo=react)](https://reactjs.org)
+[![Release & Publish](https://github.com/jonmatum/react-headless-menu/actions/workflows/npm-publish.yml/badge.svg)](https://github.com/jonmatum/react-headless-menu/actions/workflows/npm-publish.yml)
 
 > [!CAUTION]
 > This package is intended for educational purposes only.
