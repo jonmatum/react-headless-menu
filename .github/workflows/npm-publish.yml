@@ -1,25 +1,26 @@
-# This workflow will run tests using node and then publish a package to GitHub Packages when a release is created
-# For more information see: https://docs.github.com/en/actions/publishing-packages/publishing-nodejs-packages
-
-name: Node.js Package
+name: Release & Publish
 
 on:
-  release:
-    types: [created]
+  push:
+    branches:
+      - main
 
 jobs:
-  build:
+  release-please:
     runs-on: ubuntu-latest
+    outputs:
+      release_created: ${{ steps.release.outputs.release_created }}
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: googleapis/release-please-action@v4
+        id: release
         with:
-          node-version: 20
-      - run: npm ci
-      - run: npm test
+          token: ${{ secrets.GITHUB_TOKEN }}
+          release-type: node
+          package-name: react-headless-menu
 
-  publish-npm:
-    needs: build
+  build-and-publish:
+    if: ${{ needs.release-please.outputs.release_created }}
+    needs: release-please
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -28,6 +29,8 @@ jobs:
           node-version: 20
           registry-url: https://registry.npmjs.org/
       - run: npm ci
-      - run: npm publish
+      - run: npm test
+      - run: npm run build
+      - run: npm publish --access public
         env:
-          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
