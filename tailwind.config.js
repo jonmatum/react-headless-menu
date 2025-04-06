@@ -19,5 +19,5 @@ export default {
     spacing: { 128: "32rem" },
     // etc...
   },
-  plugins: ["@tailwindcss/forms", "@tailwindcss/typography"],
+  plugins: ["@tailwindcss/forms"],
 };

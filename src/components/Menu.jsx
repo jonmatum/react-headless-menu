@@ -29,19 +29,9 @@ const defaultTheme = {
   sidebarSubmenu: "ml-4 space-y-1",
 };
 
-/**
- * Renders a responsive, access-controlled, and themeable menu.
- *
- * @param {Object} props
- * @param {Array} props.items - List of grouped menu items with optional subItems.
- * @param {Array} props.userScopes - User access scopes for filtering menu items.
- * @param {"auto"|"topbar"|"sidebar"|"dropdown"} props.variant - Menu layout style.
- * @param {string} props.color - Color palette name.
- * @param {"light"|"dark"} [props.themeName] - Optional theme type.
- * @param {string} [props.selected] - Currently selected item label.
- * @param {Function} [props.onSelect] - Callback when item is selected.
- * @param {number} [props.breakpoint=768] - Screen width to switch layout when variant is "auto".
- */
+// --------------------
+// The Component
+// --------------------
 export default function Menu({
   items = [],
   userScopes = [],
@@ -86,15 +76,9 @@ export default function Menu({
   return <SidebarMenu {...{ items: filtered, theme: t, selected, onSelect }} />;
 }
 
-/**
- * Sidebar menu layout with nested items.
- *
- * @param {Object} props
- * @param {Array} props.items - Menu items to display.
- * @param {Object} props.theme - Tailwind-based theme object.
- * @param {string} props.selected - Selected item label.
- * @param {Function} props.onSelect - Selection handler.
- */
+// --------------------
+// Sidebar Variant
+// --------------------
 function SidebarMenu({ items, theme, selected, onSelect }) {
   return (
     <div className={theme.sidebarContainer}>
@@ -122,17 +106,9 @@ function SidebarMenu({ items, theme, selected, onSelect }) {
   );
 }
 
-/**
- * Topbar menu layout with dropdown groups.
- *
- * @param {Object} props
- * @param {Array} props.items - Menu groups to render.
- * @param {Object} props.theme - Tailwind-based theme object.
- * @param {string} props.selected - Selected item label.
- * @param {Function} props.onSelect - Selection handler.
- * @param {"light"|"dark"} props.themeName - Current theme.
- * @param {string} props.color - Palette name.
- */
+// --------------------
+// Topbar Variant
+// --------------------
 function TopbarMenu({ items, theme, selected, onSelect, themeName, color }) {
   const isDark = themeName === "dark";
 
@@ -172,15 +148,9 @@ function TopbarMenu({ items, theme, selected, onSelect, themeName, color }) {
   );
 }
 
-/**
- * Mobile-friendly dropdown menu layout.
- *
- * @param {Object} props
- * @param {Array} props.items - Menu groups.
- * @param {Object} props.theme - Theme classes.
- * @param {string} props.selected - Selected item label.
- * @param {Function} props.onSelect - Click handler.
- */
+// --------------------
+// Dropdown Variant (mobile or custom)
+// --------------------
 function DropdownMenu({ items, theme, selected, onSelect }) {
   return (
     <HeadlessMenu as="div" className={theme.dropdownContainer}>
@@ -213,17 +183,9 @@ function DropdownMenu({ items, theme, selected, onSelect }) {
   );
 }
 
-/**
- * Recursive item component that supports nested subItems.
- *
- * @param {Object} props
- * @param {Object} props.item - Individual menu item.
- * @param {Object} props.theme - Theme classes.
- * @param {string} props.selected - Current selection.
- * @param {Function} props.onSelect - Callback on click.
- * @param {number} props.level - Nesting level.
- * @param {"topbar"|"sidebar"|"dropdown"} props.variant - Current layout type.
- */
+// --------------------
+// Recursive Item
+// --------------------
 function RecursiveItem({ item, theme, selected, onSelect, level, variant }) {
   const hasSubItems = Array.isArray(item.subItems) && item.subItems.length > 0;
   const indent = `pl-${level * 2}`;
@@ -290,23 +252,14 @@ function RecursiveItem({ item, theme, selected, onSelect, level, variant }) {
   );
 }
 
-/**
- * Determines the layout variant based on screen width.
- *
- * @param {number} [breakpoint=768] - Breakpoint for switching to dropdown.
- * @returns {"topbar"|"dropdown"}
- */
+// --------------------
+// Helpers
+// --------------------
+
 function getResponsiveVariant(breakpoint = 768) {
   return window.innerWidth < breakpoint ? "dropdown" : "topbar";
 }
 
-/**
- * Filters menu items based on user scopes.
- *
- * @param {Array} items - Raw menu data.
- * @param {Array} userScopes - User permission scopes.
- * @returns {Array} Filtered items.
- */
 function filterItemsByScope(items, userScopes) {
   return items
     .filter(
