@@ -3,11 +3,11 @@
 A fully headless, themeable, access-controlled, and responsive menu system for React + TailwindCSS.
 
 [![npm version](https://img.shields.io/npm/v/@jonmatum%2Freact-headless-menu?style=flat-square)](https://www.npmjs.com/package/@jonmatum/react-headless-menu)
-[![License](https://img.shields.io/github/license/jonmatum/react-headless-menu?style=flat-square)](https://github.com/jonmatum/react-headless-menu/blob/main/LICENSE)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?cacheSeconds=3600)](https://github.com/jonmatum/react-headless-menu/blob/main/LICENSE)
+[![Release & Publish](https://img.shields.io/github/actions/workflow/status/jonmatum/react-headless-menu/npm-publish.yml?label=Release%20%26%20Publish&logo=github&style=flat-square)](https://github.com/jonmatum/react-headless-menu/actions/workflows/npm-publish.yml)
 [![Playground](https://img.shields.io/badge/Playground-Live-informational?style=flat-square)](https://jonmatum.github.io/react-headless-menu/)
 [![TailwindCSS](https://img.shields.io/badge/TailwindCSS-Ready-38bdf8?style=flat-square&logo=tailwindcss)](https://tailwindcss.com)
 [![React](https://img.shields.io/badge/React-18+-blue?style=flat-square&logo=react)](https://reactjs.org)
-[![Release & Publish](https://github.com/jonmatum/react-headless-menu/actions/workflows/npm-publish.yml/badge.svg)](https://github.com/jonmatum/react-headless-menu/actions/workflows/npm-publish.yml)
 
 > [!CAUTION]
 > This package is intended for educational purposes only.
