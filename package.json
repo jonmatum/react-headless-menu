@@ -12,10 +12,9 @@
     }
   },
   "files": [
-    "src",
     "dist",
-    "LICENSE",
-    "README.md"
+    "README.md",
+    "LICENSE"
   ],
   "publishConfig": {
     "access": "restricted"
