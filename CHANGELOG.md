@@ -1,0 +1,8 @@
+# Changelog
+
+## 1.0.0 (2025-04-06)
+
+
+### Features
+
+* initial release ([#13](https://github.com/jonmatum/react-headless-menu/issues/13)) ([7b9b34d](https://github.com/jonmatum/react-headless-menu/commit/7b9b34d76ad437348da0098bcf2f8bc76496d7c4))
