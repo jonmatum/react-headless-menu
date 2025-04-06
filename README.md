@@ -2,11 +2,16 @@
 
 A fully headless, themeable, access-controlled, and responsive menu system for React + TailwindCSS.
 
-[![npm version](https://img.shields.io/npm/v/react-headless-menu?style=flat-square)](https://www.npmjs.com/package/@jonmatum/react-headless-menu)
-[![License](https://img.shields.io/github/license/jonmatum/react-headless-menu?style=flat-square)](./LICENSE)
+[![npm version](https://img.shields.io/npm/v/@jonmatum%2Freact-headless-menu?style=flat-square)](https://www.npmjs.com/package/@jonmatum/react-headless-menu)
+[![License](https://img.shields.io/github/license/jonmatum/react-headless-menu?style=flat-square)](https://github.com/jonmatum/react-headless-menu/blob/main/LICENSE)
 [![Playground](https://img.shields.io/badge/Playground-Live-informational?style=flat-square)](https://jonmatum.github.io/react-headless-menu/)
 [![TailwindCSS](https://img.shields.io/badge/TailwindCSS-Ready-38bdf8?style=flat-square&logo=tailwindcss)](https://tailwindcss.com)
 [![React](https://img.shields.io/badge/React-18+-blue?style=flat-square&logo=react)](https://reactjs.org)
+
+> [!CAUTION]
+> This package is intended for educational purposes only.
+> It was built to demonstrate a concept and is not optimized or maintained for production use.
+> Use at your own discretion.
 
 ## Features
 
@@ -72,8 +77,6 @@ This project uses **release-please** and GitHub Actions to automate releases. Al
 npm run release
 ```
 
----
-
 ## Contributing
 
 We welcome PRs! Please read the [CONTRIBUTING](./CONTRIBUTING) guide.
@@ -81,8 +84,6 @@ We welcome PRs! Please read the [CONTRIBUTING](./CONTRIBUTING) guide.
 - Use conventional commits
 - Submit docs/tests with features
 - Keep code headless and style-agnostic
-
----
 
 ## License
 
